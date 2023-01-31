@@ -1,0 +1,248 @@
+.login-container {
+  // margin: 0 auto;
+  display: flex;
+  padding: 30px 30px 30px 30px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+
+  .c-transition__img {
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+  }
+
+  .is-active .c-transition__img {
+    opacity: 1;
+  }
+
+  .c-transition--img-top .c-transition__img {
+    -o-object-position: 50% 0;
+    object-position: 50% 0;
+  }
+
+  /**
+         * Keyframes
+         */
+  @-webkit-keyframes ink-transition {
+    0% {
+      transform: translateX(-1.25%);
+    }
+
+    99% {
+      transform: translateX(-98.75%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-98.75%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes ink-transition {
+    0% {
+      transform: translateX(-1.25%);
+    }
+
+    99% {
+      transform: translateX(-98.75%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(-98.75%);
+      opacity: 0;
+    }
+  }
+
+  .c-fe30 {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  .line-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 99999;
+    padding: 0 15px;
+  }
+
+  .line-container svg {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.login-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  //background-image: url("../../Assets/Images/login-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 50px;
+  border-radius: 16px;
+  width: 47.5vw;
+
+  &__content {
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #ffffff;
+      opacity: 0.9;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ffffff;
+      opacity: 0.9;
+    }
+  }
+}
+
+.login-form {
+  .submit_button:hover,
+  :focus {
+    background: #478ba2;
+    // border: 1px solid red !important;
+    color: #fff;
+  }
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  text-align: center;
+  // padding: 213px 123px 0 123px;
+  background-color: #fff7e8;
+  border-radius: 24px;
+  width: 47.5vw;
+
+  .form {
+    width: 80%;
+    align-self: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
+    color: #1c1c1c;
+    opacity: 0.9;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1c1c1c;
+    opacity: 0.6;
+  }
+
+  input {
+    width: -webkit-fill-available;
+    margin-bottom: 10px;
+    padding: 15px 20px !important;
+  }
+  input::placeholder {
+    color: #6d2314 !important;
+    font-weight: 500;
+    opacity: 0.6 !important;
+  }
+
+  .ant-form-item-explain-error {
+    margin-bottom: 20px;
+  }
+
+  .ant-btn[disabled] {
+    color: #ffffff;
+    background-color: #7aafc0;
+    cursor: not-allowed;
+  }
+
+  &__forgotpsw,
+  &__forgotpsw:hover {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #478ba2;
+    opacity: 0.6;
+  }
+  .error {
+    color: red;
+  }
+}
+.mobile {
+  padding: 70px 0;
+  overflow-y: hidden;
+}
+.submit_button {
+  font-family: "Syne";
+  font-style: normal;
+  cursor: pointer;
+  padding: 15px 30px;
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+  background: #478ba2;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.2px;
+  border: 0;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.ant-input .ant-input-status-success .text-input {
+  border: solid red;
+}
+.login-form {
+  input:hover,
+  :focus {
+    border: 1px solid #ffbe5b !important;
+  }
+}
+.auth_text {
+  margin-top: 70px;
+  font-family: "Syne";
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1c1c1c;
+  opacity: 0.9;
+  margin-top: 70px;
+
+  a {
+    font-family: "Syne";
+    font-style: normal;
+    font-weight: 700;
+    color: #ffbe5b;
+    text-decoration: none;
+  }
+  a:hover,
+  :focus {
+    background-color: transparent !important;
+  }
+}

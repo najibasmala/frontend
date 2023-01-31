@@ -1,0 +1,17 @@
+.SingleOption {
+  width: 46%;
+  height: 50px;
+  padding: 15px 20px;
+  margin: 10px;
+  box-shadow: 0 0 2px black;
+  .Wrong {
+    background-color: rgb(233, 0, 0);
+    color: white;
+    box-shadow: 0 0 1px black;
+  }
+  .Select {
+    background-color: rgb(7, 207, 0);
+    color: white;
+    box-shadow: 0 0 1px black;
+  }
+}

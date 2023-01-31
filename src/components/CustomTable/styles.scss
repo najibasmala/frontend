@@ -1,0 +1,230 @@
+.content-table {
+  display: flex;
+  flex-direction: column;
+  padding: 33px 30px;
+  border: 2px solid pink;
+  border-radius: 24px;
+  width: 100%;
+}
+.add-employee {
+  display: flex;
+  margin-bottom: 22px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  .search {
+    margin-right: 0px;
+    //  width: 90%;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.2px;
+
+    color: #000000;
+  }
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.search {
+  input {
+    border-color: pink !important;
+    width: 350px !important;
+    // margin-right: 50px;
+    padding: 0 !important;
+    color: #000000;
+    border: 2px solid #fff7e8;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  input::placeholder {
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    letter-spacing: -0.2px !important;
+    color: #000000 !important;
+  }
+
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused {
+    box-shadow: none;
+    color: red;
+    background-color: #000000;
+  }
+}
+
+.employee-table {
+  width: 100%;
+  height: 100%;
+}
+
+.filter-col {
+  align-items: center !important;
+  display: flex;
+  //  margin-left: 20px;
+  //  justify-content: space-between;
+  justify-content: end;
+  // right: 0;
+  .filter {
+    //idth: 200px;
+    display: flex;
+  }
+  .filter-dropdown,
+  .totalcash-dropdown {
+    display: flex;
+    padding: 11px 30px;
+    align-self: center;
+    background: pink;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+    color: #000000;
+    svg {
+      font-size: 10px;
+    }
+
+    .ant-space {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .filter-dropdown:hover {
+    color: #000000 !important;
+  }
+
+  .totalcash-dropdown {
+    //   margin-left: auto;
+    height: 48px;
+    width: 200px;
+  }
+}
+
+.filter-dropdown-menu {
+  top: 10px;
+  padding: 20px;
+  border-radius: 24px;
+  background-color: pink;
+
+  .ant-dropdown-menu-item {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .ant-dropdown-menu-item:hover {
+    background-color: pink !important;
+  }
+}
+
+.employee-table {
+  border-radius: 24px;
+
+  .ant-table-thead > tr > th {
+    width: 300px;
+    //  padding: 19px 23px !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    // line-height: 17px !important;
+    text-transform: uppercase !important;
+    color: #727272 !important;
+    background-color: pink !important;
+    border: 2px solid pink !important;
+  }
+  .ant-table-body {
+    overflow: hidden;
+  }
+  tr {
+    border-radius: 12px;
+  }
+  tr:last-child {
+    //background: red !important;
+    border-bottom: 1px solid red !important;
+  }
+
+  .ant-table-container table > thead > tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .ant-table-container table > thead > tr:first-child th:nth-last-child(2) {
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+  }
+  .ant-table-container table > thead > tr:first-child th:nth-last-child(1) {
+    display: none;
+  }
+
+  .ant-table-thead
+    > tr
+    > th:not(:last-child):not(.ant-table-selection-column):not(
+      .ant-table-row-expand-icon-cell
+    ):not([colspan])::before {
+    background-color: transparent;
+  }
+
+  td {
+    text-transform: capitalize;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+  }
+
+  .employee-col {
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 136.52% !important;
+  }
+}
+
+.text-input::placeholder {
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  line-height: 18px !important;
+  letter-spacing: -0.2px !important;
+  color: #333333 !important;
+  //padding-left: 15px !important;
+}
+.text-input {
+  padding: 0px 10px !important;
+  height: 48px;
+  display: flex;
+}
+.user-cards {
+  display: flex;
+  row-gap: 20px;
+  gap: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+.apps-button {
+  width: 265px !important;
+  // height: 48px;
+  padding: 0 !important;
+  width: 265px;
+  height: 48px;
+  font-weight: 600 !important;
+  &:hover {
+    padding: 0 !important;
+    height: 48px !important;
+  }
+}
+.mobile-button {
+  padding: 12px 24px;
+  height: 48px;
+}
+.ant-btn > span {
+  font-weight: 600 !important;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.ant-table-tbody > tr:last-child > td {
+  border-bottom: none !important;
+}
