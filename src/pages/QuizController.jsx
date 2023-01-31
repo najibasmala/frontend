@@ -25,15 +25,15 @@ const QuizController = (CUId) => {
     }, [])
 
     const getExams = async () => {
-        const { data } = await axios.get('http://localhost:5000/examquestions/' + id.id);
+        const { data } = await axios.get('https://elearning-w-api.onrender.com/examquestions/' + id.id);
         setQuestions(data);
         userCheck();
     }
 
     const securityData = async () => {
         axios.all([
-            await axios.get('http://localhost:5000/users/' + CUId.CUId),
-            await axios.get('http://localhost:5000/exam/exam/' + id.id)
+            await axios.get('https://elearning-w-api.onrender.com/users/' + CUId.CUId),
+            await axios.get('https://elearning-w-api.onrender.com/exam/exam/' + id.id)
         ]).then(axios.spread((data, data2) => {
             if (data2.data[0].creatorUserId === CUId.CUId) {
                 setTimerData(data2.data[0].time)
@@ -51,7 +51,7 @@ const QuizController = (CUId) => {
                         score: 0,
                     }
                 };
-                axios.post("http://localhost:5000/userexams", dummyData).then((response) => {
+                axios.post("https://elearning-w-api.onrender.com/userexams", dummyData).then((response) => {
                     
                    
                     setExam_id(response.data._id)
@@ -67,7 +67,7 @@ const QuizController = (CUId) => {
     const userCheck = async () => {
         console.log("yyyyyyy",CUId);
         try {
-            const { data } = await axios.get('http://localhost:5000/userexams/' + CUId.CUId);
+            const { data } = await axios.get('https://elearning-w-api.onrender.com/userexams/' + CUId.CUId);
             console.log("rrrrrrrr",data);
             const myData = await Promise.all(data.map((d) => d.examId))
             for (let i = 0; i <= myData.length; i++) {
@@ -144,7 +144,7 @@ const QuizController = (CUId) => {
     }, [])
 
     const getExams = async () => {
-        const { data } = await axios.get('http://localhost:5000/examquestions/' + id.id);
+        const { data } = await axios.get('https://elearning-w-api.onrender.com/examquestions/' + id.id);
         console.log('data',data)
         setQuestions(data);
         userCheck();
@@ -152,8 +152,8 @@ const QuizController = (CUId) => {
 
     const securityData = async () => {
         axios.all([
-            await axios.get('http://localhost:5000/users/' + CUId.CUId),
-            await axios.get('http://localhost:5000/exam/exam/' + id.id)
+            await axios.get('https://elearning-w-api.onrender.com/users/' + CUId.CUId),
+            await axios.get('https://elearning-w-api.onrender.com/exam/exam/' + id.id)
         ]).then(axios.spread((data, data2) => {
             if (data2.data[0].creatorUserId == CUId.CUId) {
                 setTimerData(data2.data[0].time)
@@ -169,7 +169,7 @@ const QuizController = (CUId) => {
                         score: 0,
                     }
                 };
-                axios.post("http://localhost:5000/userexams/", dummyData).then((response) => {
+                axios.post("https://elearning-w-api.onrender.com/userexams/", dummyData).then((response) => {
                     console.log(response.status);
                     console.log(response.data,"rrrrrr");
                   //  setExam_id(response.data._id)
@@ -192,7 +192,7 @@ const QuizController = (CUId) => {
 
     const userCheck = async () => {
         try {
-            /*const { data } = await axios.get('http://localhost:5000/userexams/' + CUId.CUId);
+            /*const { data } = await axios.get('https://elearning-w-api.onrender.com/userexams/' + CUId.CUId);
             const myData = await Promise.all(data.map((d) => d.examId))
             for (let i = 0; i <= myData.length; i++) {
                 if (myData[i] === id.id) {

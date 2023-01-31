@@ -31,7 +31,7 @@ const Result = () => {
   }, [setScore])
 
   const getExamNames =  async () => {
-    await axios.get(`http://localhost:5000/userexams/exam/${id.id}`).then((response) => {
+    await axios.get(`https://elearning-w-api.onrender.com/userexams/exam/${id.id}`).then((response) => {
       console.log("examnnna",response);
       setScore(response.data);  getPassGrade();
     });
@@ -44,7 +44,7 @@ const Result = () => {
   }
 
   const getPassGrade = async () => {
-    await axios.get(`http://localhost:5000/exam/exam/${id.id}`).then((response) => {
+    await axios.get(`https://elearning-w-api.onrender.com/exam/exam/${id.id}`).then((response) => {
       console.log("responnnse",response);
       setPassGrade(response.data.map(el=>el.passGrade));
     });

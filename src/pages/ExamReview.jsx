@@ -78,7 +78,7 @@ const ExamReview = () => {
     }, [])
 
     const getExamInfos = async () => {
-        const { data } = await axios.get(`http://localhost:5000/userexams/exam/${id.id}`);
+        const { data } = await axios.get(`https://elearning-w-api.onrender.com/userexams/exam/${id.id}`);
         console.log(data , 'from exam review')
         console.log(data[0].examReview[0]?.qAnswers)
         setExamQuestions(data);

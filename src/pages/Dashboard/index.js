@@ -72,18 +72,22 @@ const Dashboard = (CUId) => {
   const [dummy, setDummy] = useState(0);
 
   const getExamNames = async () => {
-    // const { data } = await axios.get(`http://localhost:5000/exam/${CUId.CUId}`);
-    const { data } = await axios.get(`http://localhost:5000/exam`);
+    // const { data } = await axios.get(`https://elearning-w-api.onrender.com/exam/${CUId.CUId}`);
+    const { data } = await axios.get(
+      `https://elearning-w-api.onrender.com/exam`
+    );
     setExamNameStorage(data);
     setIsLoading(false);
     console.log(data, "data");
   };
 
   const deleteExam = (id) => {
-    axios.delete(`http://localhost:5000/exam/${id}`).then((response) => {
-      console.log(response.status);
-      console.log(response.data);
-    });
+    axios
+      .delete(`https://elearning-w-api.onrender.com/exam/${id}`)
+      .then((response) => {
+        console.log(response.status);
+        console.log(response.data);
+      });
     setDummy(dummy + 1);
   };
 
@@ -101,10 +105,12 @@ const Dashboard = (CUId) => {
         examname: examName,
       };
       console.log(newExam);
-      axios.post("http://localhost:5000/exam/", newExam).then((response) => {
-        console.log(response.status);
-        console.log(response.data);
-      });
+      axios
+        .post("https://elearning-w-api.onrender.com/exam/", newExam)
+        .then((response) => {
+          console.log(response.status);
+          console.log(response.data);
+        });
       setDummy(dummy + 1);
     }
   };
@@ -251,7 +257,7 @@ const Dashboard = (CUId) => {
                     scope="row"
                     onClick={() => {
                       navigator.clipboard.writeText(
-                        "http://localhost:5000/quiz/" + name._id
+                        "https://elearning-w-api.onrender.com/quiz/" + name._id
                       );
                     }}
                   >

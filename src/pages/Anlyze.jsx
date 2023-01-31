@@ -63,7 +63,7 @@ const Anlyze = (CUId) => {
 
 
     const getExamInfos = async () => {
-        const { data } = await axios.get(`http://localhost:5000/userexams/exam/${id.id}`);
+        const { data } = await axios.get(`https://elearning-w-api.onrender.com/userexams/exam/${id.id}`);
         setExamInfo(data);
         console.log("uuu",data);
         setStart(false);
@@ -72,14 +72,14 @@ const Anlyze = (CUId) => {
 
     /*
         const getExamNames = async () => {
-            const { data } = await axios.get(`http://localhost:5000/userexams/exam/${id.id}`);
+            const { data } = await axios.get(`https://elearning-w-api.onrender.com/userexams/exam/${id.id}`);
             for (let i = 0; i < data.length; i++) {
                 setDatas(data);
             }
         }
     
         const getExam = async () => {
-            const { data } = await axios.get(`http://localhost:5000/exam/exam/${id.id}`);
+            const { data } = await axios.get(`https://elearning-w-api.onrender.com/exam/exam/${id.id}`);
             for (let i = 0; i < data.length; i++) {
                 setExamName(data);
             }
@@ -88,7 +88,7 @@ const Anlyze = (CUId) => {
     
         const getUserName = async () => {
             for (var i = 0; i <= datas.length - 1; i++) {
-                const { data } = await axios.get(`http://localhost:5000/users/` + datas[i]?.userId);
+                const { data } = await axios.get(`https://elearning-w-api.onrender.com/users/` + datas[i]?.userId);
                 for (let k = 0; k < data.length; k++) {
                     setNames(data)
                 }

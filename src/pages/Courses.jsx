@@ -124,7 +124,7 @@ const Courses = ({ CUId }) => {
   useEffect(() => {
     const getFilesList = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/files/getAllFiles");
+        const { data } = await axios.get("https://elearning-w-api.onrender.com/files/getAllFiles");
         setErrorMsg('');
         setFilesList(data);
       } catch (error) {
@@ -137,7 +137,7 @@ const Courses = ({ CUId }) => {
 console.log("ffff",filesList);
   const downloadFile = async (id, path, mimetype) => {
     try {
-      const result = await axios.get(`http://localhost:5000/files/download/${id}`, {
+      const result = await axios.get(`https://elearning-w-api.onrender.com/files/download/${id}`, {
         responseType: 'blob'
       });
       const split = path.split('/');
@@ -191,7 +191,7 @@ console.log("ffff",filesList);
             formData.append('description', description);
   
             setErrorMsg('');
-            await axios.post("http://localhost:5000/files/upload", formData, {
+            await axios.post("https://elearning-w-api.onrender.com/files/upload", formData, {
               headers: {
                 'Content-Type': 'multipart/form-data'
               }

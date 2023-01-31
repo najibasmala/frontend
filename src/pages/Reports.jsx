@@ -64,13 +64,13 @@ const Reports = (CUId) => {
 
 
   const getUserDatas = async () => {
-    const { data } = await axios.get(`http://localhost:5000/userexams/` + CUId.CUId)
+    const { data } = await axios.get(`https://elearning-w-api.onrender.com/userexams/` + CUId.CUId)
     setUserDatas(data)
     console.log(data)
   }
 
   const getExamDatas = async () => {
-    await axios.get(`http://localhost:5000/exam`).then((response) => {
+    await axios.get(`https://elearning-w-api.onrender.com/exam`).then((response) => {
       setExamDatas(response.data)
       console.log("examsdata",response.data)
       setIsLoading(false)

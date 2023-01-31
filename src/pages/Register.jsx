@@ -85,7 +85,7 @@ const Register = () => {
       password: pass,
     }
     console.log(registered)
-    axios.post("http://localhost:5000/users/", registered).then((response) => {
+    axios.post("https://elearning-w-api.onrender.com/users/", registered).then((response) => {
       console.log(response.status);
       console.log(response.data);
     });

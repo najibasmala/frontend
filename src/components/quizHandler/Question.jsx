@@ -85,7 +85,7 @@ const Question = ({
   }, [])
 
   const handleCreatorUser = async () => {
-    const { data } = await axios.get('http://localhost:5000/exam/exam/' + id.id)
+    const { data } = await axios.get('https://elearning-w-api.onrender.com/exam/exam/' + id.id)
     setPass(data[0].creatorUserId == userId)
     setIsLoading(false)
   }
@@ -131,12 +131,12 @@ const Question = ({
         examId: id.id,
         grade: score,
       };
-    const url="http://localhost:5000/userexams/"+ exam_id
+    const url="https://elearning-w-api.onrender.com/userexams/"+ exam_id
    
 
 
  
-      axios.patch("http://localhost:5000/userexams/"+exam_id, userExam).then((response) => {
+      axios.patch("https://elearning-w-api.onrender.com/userexams/"+exam_id, userExam).then((response) => {
       console.log( "from question",response);
       
       
@@ -158,7 +158,7 @@ const Question = ({
       };
    console.log("oooo",userOptions);
    console.log("iddd",exam_id)
-      axios.put("http://localhost:5000/userexams/"+exam_id, userOptions).then((response) => {
+      axios.put("https://elearning-w-api.onrender.com/userexams/"+exam_id, userOptions).then((response) => {
         console.log("ttt",response.status);
         console.log('yy',response.data);
         console.log("oooo",userOptions);

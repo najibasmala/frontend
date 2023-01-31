@@ -66,13 +66,13 @@ const Dashboard = (CUId) => {
 
 
   const getExamNames = async () => {
-    const { data } = await axios.get(`http://localhost:5000/exam/${CUId.CUId}`);
+    const { data } = await axios.get(`https://elearning-w-api.onrender.com/exam/${CUId.CUId}`);
     setExamNameStorage(data);
     setIsLoading(false);
   }
 
   const deleteExam = (id) => {
-    axios.delete(`http://localhost:5000/exam/${id}`).then((response) => {
+    axios.delete(`https://elearning-w-api.onrender.com/exam/${id}`).then((response) => {
       console.log(response.status);
       console.log(response.data);
     });
@@ -93,7 +93,7 @@ const Dashboard = (CUId) => {
         examname: examName,
       };
       console.log(newExam)
-      axios.post("http://localhost:5000/exam/", newExam).then((response) => {
+      axios.post("https://elearning-w-api.onrender.com/exam/", newExam).then((response) => {
         console.log(response.status);
         console.log(response.data);
       });
