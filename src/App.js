@@ -36,7 +36,7 @@ function App() {
       <Routes>
         <Route element={<App />}></Route>
         <Route path="/"  element={<Home  CUId={currentUserUid} />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="https://elearning-w.onrender.com/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/help" element={<Help />} />
         <Route
